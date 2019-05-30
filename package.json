@@ -1,0 +1,26 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "Bike Sharing Web Apps",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start-build": "npm run build && npm start",
+    "build": "cd ../client && npm run build && cd ../server"
+  },
+  "keywords": [
+    "bike-sharing-web"
+  ],
+  "author": "Authon",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.0",
+    "pg": "^7.11.0"
+  }
+}

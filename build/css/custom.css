@@ -1,0 +1,110 @@
+.body {
+	height: 100% !important;
+}
+.wrapper {
+	background-color: white !important;
+}
+
+.image-logo {
+    width: 27%;
+    display: block;
+    margin: 50px auto -75px auto;
+}
+
+.background-blue {
+	background-color: #1c5692 !important;
+}
+.background-semi-blue {
+	background-color: #2471c1 !important;
+}
+
+.margin-icon {
+    margin-right: 5px
+}
+
+.btn-upload {
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 20px;
+    border-color: #2471c1;
+    background-color: #2471c1;
+}
+.btn-download {
+    width: 12.5%;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 20px;
+    border-color: #2471c1;
+    background-color: #2471c1;
+}
+.btn-download-long {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 20px;
+    border-color: #2471c1;
+    background-color: #2471c1;
+}
+.btn-action {
+	width: 25.5%;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.center {
+	text-align: center
+}
+
+.margin-top-default {
+    margin-top: 5px
+}
+
+.margin-bottom-triple {
+    margin-bottom: 15px
+}
+
+.margin-top-bottom-triple {
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+.text-white {
+    color: white
+}
+
+.text-white:hover {
+    color: #2471c1
+}
+
+.button-orange {
+    border-color: #2471c1;
+    background-color: #2471c1;
+}
+
+.button-orange:hover {
+    border-color: #1c5692;
+    background-color: #1c5692 
+}
+
+.button-green {
+    border-color: #1c5692;
+    background-color: #1c5692 
+}
+
+.button-green:hover {
+    border-color: #2471c1;
+    background-color: #2471c1 
+}
