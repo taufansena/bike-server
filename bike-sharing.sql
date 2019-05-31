@@ -136,10 +136,13 @@ CREATE TABLE VOUCHER (
     PRIMARY KEY(id_voucher)
 );
 
-CREATE TABLE ANGGOTA_VOUCHER(
-    no_kartu_anggota varchar(100) not null REFERENCES ANGGOTA(no_kartu),
-    id_voucher varchar(100) not null REFERENCES VOUCHER(id_voucher),
-    id_voucher_anggota integer NOT NULL DEFAULT nextval('anggota_voucher_id_voucher_anggota_seq'::regclass) ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
-
-    PRIMARY KEY (id_voucher_anggota)
-);
+CREATE TABLE ANGGOTA_VOUCHER
+(
+    id_anggota_voucher integer NOT NULL DEFAULT nextval('anggota_voucher_id_anggota_voucher_seq'::regclass) ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    no_kartu_anggota character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    id_voucher character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT anggota_voucher_pkey PRIMARY KEY (id_anggota_voucher)
+)
+WITH (
+    OIDS = FALSE
+)
