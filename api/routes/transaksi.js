@@ -9,6 +9,17 @@ router.get('/', (req, res, next) => {
 	})
 })
 
+router.post('/:topup', (req, res, next) => {
+	const login = {
+		ktp: req.body.ktp,
+		saldo: req.body.saldo
+	}
+	pool.query('CALL public.topupsaldo($1, $2)', [ login.ktp, login.saldo ], (error, results) => {
+		if (checkerror(error, res)) return
+		res.status(200).json(results.rows)
+	})
+})
+
 const checkerror = (error, res, client, done) => {
 	if (error) {
 		console.log(error)
