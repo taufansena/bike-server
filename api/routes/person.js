@@ -159,7 +159,6 @@ router.post('/:login', (req, res, next) => {
 				if (checkerror(error, res)) return
 				pool.query('SELECT * FROM anggota WHERE ktp = $1', [ login.ktp ], (err, ress) => {
 					checkerror(err, ress)
-					console.log(ress.rows[0].no_kartu)
 					const person = {
 						ktp: results.rows[0].ktp,
 						email: results.rows[0].email,

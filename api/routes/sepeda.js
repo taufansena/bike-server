@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
 			sp.status as status,
 			st.nama as stasiun,
 			st.id_stasiun as id_stasiun,
-			pe.nama as penyumbang
+			pe.nama as penyumbang,
+			an.no_kartu
 		FROM sepeda as sp
 		JOIN stasiun as st
 		ON st.id_stasiun = sp.id_stasiun

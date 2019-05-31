@@ -95,19 +95,19 @@ router.patch('/:acaraId', (req, res) => {
 		client.query(
 			`UPDATE acara SET 
 			"judul" = $1, "deskripsi" = $2, "gratis" = $3, "tgl_mulai" = $4,
-			"tgl_selesai" = $5 WHERE id_acara = $7`,
-			[ acara.judul, acara.deskripsi, acara.gratis, acara.mulai, acara.selesai, acara.stasiun, id ],
+			"tgl_selesai" = $5 WHERE id_acara = $6`,
+			[ acara.judul, acara.deskripsi, acara.gratis, acara.mulai, acara.selesai, id ],
 			(err) => {
 				checkerror(err, res, client, done)
 
 				client.query(`DELETE FROM acara_stasiun where id_acara = $1`, [ id ], (er) => {
 					checkerror(er, res, client, done)
 
-					for (i = 0; i < acara.stasiun.lenght; i++) {
+					for (i = 0; i < acara.stasiun.length; i++) {
 						client.query(
 							`INSERT INTO acara_stasiun
 					("id_acara", "id_stasiun") VALUES ($1, $2)`,
-							[ id, acara.stasiun[i] ],
+							[ id, acara.stasiun[i].value ],
 							(e) => {
 								checkerror(e, res, client, done)
 							}

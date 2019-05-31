@@ -4,7 +4,9 @@
   "description": "Bike Sharing Web Apps",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "start-build": "npm run build && npm start",
+    "build": "cd ../client && npm run build && cd ../server"
   },
   "keywords": [
     "bike-sharing-web"

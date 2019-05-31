@@ -94,7 +94,7 @@ $BODY$;
 
 CREATE TRIGGER updatepointvoucher
     AFTER UPDATE
-    ON public.voucher
+    ON public.anggota_voucher
     FOR EACH ROW
     EXECUTE PROCEDURE public.updatepointvoucher();
 
@@ -135,7 +135,7 @@ BEGIN
 END;
 $BODY$;
 
-CREATE TRIGGER updatepointvoucher
+CREATE TRIGGER updatejumlahvoucher
     AFTER INSERT
     ON public.anggota_voucher
     FOR EACH ROW

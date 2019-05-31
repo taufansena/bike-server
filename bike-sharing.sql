@@ -139,6 +139,7 @@ CREATE TABLE VOUCHER (
 CREATE TABLE ANGGOTA_VOUCHER(
     no_kartu_anggota varchar(100) not null REFERENCES ANGGOTA(no_kartu),
     id_voucher varchar(100) not null REFERENCES VOUCHER(id_voucher),
+    id_voucher_anggota integer NOT NULL DEFAULT nextval('anggota_voucher_id_voucher_anggota_seq'::regclass) ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
 
-    PRIMARY KEY (no_kartu_anggota,id_voucher)
+    PRIMARY KEY (id_voucher_anggota)
 );
